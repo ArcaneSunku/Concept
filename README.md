@@ -1,5 +1,4 @@
 # Concept
-Concept Text-Based RPG
 
 A simple Text-Based RPG
 
