@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.github.arcanesunku'
-version '4.8.2020-SNAPSHOT'
+version '11.8.2020-SNAPSHOT'
 
 targetCompatibility=11
 mainClassName="Main"
@@ -15,4 +15,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class" : "Main"
+    }
 }
