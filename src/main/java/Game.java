@@ -12,6 +12,9 @@ import java.util.List;
 
 public class Game implements Runnable{
 
+    private static final Color LIGHT_SOFT_BLUE = new Color(10, 52, 114);
+    private static final Color DARK_SOFT_BLUE = new Color(4, 21, 57);
+
     // Possible states for the application
     private enum AppState {
         NORMAL,
@@ -145,7 +148,7 @@ public class Game implements Runnable{
         changeTextColor(Color.WHITE);
         m_GameArea.setLineWrap(true);
         m_GameArea.setEditable(false);
-        m_GameArea.setBackground(new Color(10, 52, 114));
+        m_GameArea.setBackground(LIGHT_SOFT_BLUE);
         m_GameArea.setBorder(null);
 
         m_UserInput.setBorder(new EmptyBorder(0, 1, 0, 50));
@@ -199,8 +202,8 @@ public class Game implements Runnable{
 
         caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 
-        scrollPane.getVerticalScrollBar().setBorder(new LineBorder(new Color(4, 21, 57), 1, false));
-        scrollPane.setBorder(new LineBorder(new Color(4, 21, 57), 1, false));
+        scrollPane.getVerticalScrollBar().setBorder(new LineBorder(DARK_SOFT_BLUE, 1, false));
+        scrollPane.setBorder(new LineBorder(DARK_SOFT_BLUE, 1, false));
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.getVerticalScrollBar().setBackground(null);
         scrollPane.createVerticalScrollBar();
